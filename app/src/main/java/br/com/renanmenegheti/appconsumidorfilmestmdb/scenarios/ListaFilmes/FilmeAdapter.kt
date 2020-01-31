@@ -1,7 +1,6 @@
 package br.com.renanmenegheti.appconsumidorfilmestmdb.scenarios.ListaFilmes
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.renanmenegheti.appconsumidorfilmestmdb.R
 import br.com.renanmenegheti.appconsumidorfilmestmdb.entities.Filme
 import br.com.renanmenegheti.appconsumidorfilmestmdb.utils.GlideApp
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import kotlinx.android.synthetic.main.filmes_item.view.*
 
 
@@ -40,7 +37,7 @@ class FilmeAdapter(val context: Context, val filmes: List<Filme>): RecyclerView.
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
         fun bindView(context: Context, filme: Filme) {
-            itemView.tvNomeFilme.text = filme.original_title
+            itemView.tvNomeFilme.text = filme.title
 
             System.out.println(filme.poster_url)
 

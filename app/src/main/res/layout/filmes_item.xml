@@ -27,7 +27,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Nome do Filme" />
+        android:text="@string/nome_do_filme" />
 
 
 </LinearLayout>
