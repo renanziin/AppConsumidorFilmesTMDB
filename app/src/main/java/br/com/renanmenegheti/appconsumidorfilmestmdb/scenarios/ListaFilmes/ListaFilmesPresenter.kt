@@ -1,7 +1,9 @@
 package br.com.renanmenegheti.appconsumidorfilmestmdb.scenarios.ListaFilmes
 
+import android.util.Log
 import br.com.renanmenegheti.appconsumidorfilmestmdb.entities.Filme
 import br.com.renanmenegheti.appconsumidorfilmestmdb.network.RetrofitInicializer
+import org.jetbrains.anko.doAsync
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,8 +30,13 @@ class ListaFilmesPresenter(val view: ListaFilmesContract.View): ListaFilmesContr
                 }
             }
 
-
         })
+
+
+
+
+
+
 
 
     }

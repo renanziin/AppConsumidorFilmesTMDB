@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="72dp">
+    android:layout_height="wrap_content">
 
 
     <ImageView
         android:id="@+id/imgFilme"
-        android:layout_width="100dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         android:contentDescription="@string/imagem_do_filme"
-        android:src="@mipmap/ic_broken_image"/>
+        android:src="@mipmap/ic_broken_image" />
 
     <TextView
+        android:layout_marginBottom="18dp"
         android:id="@+id/tvNomeFilme"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="14sp"
-        android:gravity="center_vertical"
-        android:maxLines="3"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/nome_do_filme" />
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:gravity="top"
+        android:maxLines="2"
+        android:text="@string/nome_do_filme"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="#423f3e"/>
 
 
 </LinearLayout>

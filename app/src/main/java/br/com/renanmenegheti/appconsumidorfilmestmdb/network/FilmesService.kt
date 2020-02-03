@@ -12,7 +12,7 @@ interface FilmesService {
     fun getTopFilmes(): Call<List<Filme>>
 
     @GET("movies/{id}")
-    fun getFilmeById(@Path ("id")id: String): Call<List<Filme>>
+    fun getFilmeById(@Path ("id")id: String): Call<Filme>
 
 
 }

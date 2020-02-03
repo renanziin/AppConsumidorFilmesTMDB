@@ -7,5 +7,6 @@ data class Filme(
     val poster_url: String,
     val genres: List<String>,
     val release_date: String,
-    val overview: String
+    val overview: String,
+    val backdrop_url: String
 )

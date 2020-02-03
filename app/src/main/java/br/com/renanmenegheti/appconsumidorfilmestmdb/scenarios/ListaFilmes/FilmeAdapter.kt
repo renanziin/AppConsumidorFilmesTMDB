@@ -44,7 +44,6 @@ class FilmeAdapter(val context: Context, val filmes: List<Filme>): RecyclerView.
             GlideApp.with(context)
                 .load(filme.poster_url)
                 .placeholder(R.mipmap.ic_broken_image)
-                .centerCrop()
                 .into(itemView.imgFilme)
 
 
