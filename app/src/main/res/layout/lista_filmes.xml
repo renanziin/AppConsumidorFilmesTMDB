@@ -7,7 +7,8 @@
     tools:context=".scenarios.ListaFilmes.ListaFilmesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginLeft="36dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:id="@+id/rvListaFilmes"
         tools:listitem="@layout/filmes_item"
         android:layout_width="match_parent"

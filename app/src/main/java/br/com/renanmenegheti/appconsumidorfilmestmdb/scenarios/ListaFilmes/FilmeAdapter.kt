@@ -13,11 +13,11 @@ import kotlinx.android.synthetic.main.filmes_item.view.*
 
 class FilmeAdapter(val context: Context, val filmes: List<Filme>): RecyclerView.Adapter<FilmeAdapter.ViewHolder>() {
 
-//    var itemClickListener: ((index: Int) -> Unit)? = null
-//
-//    fun setOnClickListener(clique: ((index: Int) -> Unit)){
-//        this.itemClickListener = clique
-//    }
+    var itemClickListener: ((index: Int) -> Unit)? = null
+
+    fun setOnClickListener(clique: ((index: Int) -> Unit)){
+        this.itemClickListener = clique
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.filmes_item,parent, false)
@@ -29,29 +29,27 @@ class FilmeAdapter(val context: Context, val filmes: List<Filme>): RecyclerView.
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(context, filmes[position])
+        holder.bindView(context, filmes[position], itemClickListener)
     }
 
 
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        fun bindView(context: Context, filme: Filme) {
+        fun bindView(context: Context, filme: Filme, itemClickListener: ((index: Int) -> Unit)?) {
             itemView.tvNomeFilme.text = filme.title
-
-            System.out.println(filme.poster_url)
 
             GlideApp.with(context)
                 .load(filme.poster_url)
-                .placeholder(R.mipmap.ic_broken_image)
+                .error(R.mipmap.ic_broken_image)
                 .into(itemView.imgFilme)
 
 
-//            if(itemClickListener != null) {
-//                itemView.setOnClickListener {
-//                    itemClickListener.invoke(adapterPosition)
-//                }
-//            }
+            if(itemClickListener != null) {
+                itemView.setOnClickListener {
+                    itemClickListener.invoke(adapterPosition)
+                }
+            }
 
         }
 

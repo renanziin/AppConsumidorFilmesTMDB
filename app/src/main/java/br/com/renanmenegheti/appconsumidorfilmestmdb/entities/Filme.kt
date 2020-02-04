@@ -8,5 +8,6 @@ data class Filme(
     val genres: List<String>,
     val release_date: String,
     val overview: String,
-    val backdrop_url: String
+    val backdrop_url: String,
+    val runtime: String
 )

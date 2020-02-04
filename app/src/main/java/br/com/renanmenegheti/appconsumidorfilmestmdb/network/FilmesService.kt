@@ -11,6 +11,7 @@ interface FilmesService {
     @GET("movies")
     fun getTopFilmes(): Call<List<Filme>>
 
+    // recebe um filme buscando-o pelo id
     @GET("movies/{id}")
     fun getFilmeById(@Path ("id")id: String): Call<Filme>
 

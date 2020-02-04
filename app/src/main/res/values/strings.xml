@@ -2,4 +2,8 @@
     <string name="app_name">AppConsumidorFilmesTMDB</string>
     <string name="imagem_do_filme">Imagem do Filme</string>
     <string name="nome_do_filme">Nome do Filme</string>
+    <string name="avaliacao">Avaliação</string>
+    <string name="duracao">Duração</string>
+    <string name="lancamento">Lançamento</string>
+    <string name="imagem_de_capa_do_filme">Imagem de Capa do Filme</string>
 </resources>

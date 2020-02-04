@@ -6,12 +6,24 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:id="@+id/imgFilme"
-        android:layout_width="160dp"
-        android:layout_height="250dp"
-        android:contentDescription="@string/imagem_do_filme"
-        android:src="@mipmap/ic_broken_image" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pbCarregandoFilme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/imgFilme"
+            android:layout_width="160dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/imagem_do_filme"/>
+
+    </FrameLayout>
 
     <TextView
         android:layout_marginBottom="18dp"
@@ -25,6 +37,7 @@
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:textColor="#423f3e"/>
+
 
 
 </LinearLayout>
