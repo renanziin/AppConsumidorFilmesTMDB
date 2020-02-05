@@ -36,6 +36,7 @@ class ListaFilmesActivity : AppCompatActivity(), ListaFilmesContract.View {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
+
     override fun mostraLista(filmes: List<Filme>) {
 
         val spanCount = calculaSpans()

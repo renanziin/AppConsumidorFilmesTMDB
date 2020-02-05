@@ -26,11 +26,11 @@ class DetalheFilmeActivity : AppCompatActivity(), DetalheFilmeContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detalhe_filme)
 
+        // recebendo o id do filme clicado na lista
         idFilme = intent.getStringExtra(ID_FILME)
         if (idFilme != null){
             presenter.onGetFilmeById(idFilme!!)
         }
-
     }
 
     override fun exibeMensagem(msg: String) {
@@ -39,7 +39,6 @@ class DetalheFilmeActivity : AppCompatActivity(), DetalheFilmeContract.View {
 
     // carrega foto de backdrop e informações formatadas do filme
     override fun mostraFilme(filme: Filme) {
-
 
         GlideApp.with(this)
             .load(filme.backdrop_url)
@@ -51,6 +50,7 @@ class DetalheFilmeActivity : AppCompatActivity(), DetalheFilmeContract.View {
         tvGenerosFilme.text = filme.genres.toString()
         tvAvaliacaoFilme.text = filme.vote_average
         tvDuracaoFilme.text = "${filme.runtime} min"
+        // data formatada do padrão americano para o brasileiro
         tvLancamentoFilme.text = "${filme.release_date.slice(8..9)}/${filme.release_date.slice(5..6)}/${filme.release_date.slice(0..3)}"
         tvOverview.text = filme.overview
 

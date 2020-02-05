@@ -34,7 +34,6 @@
         android:gravity="top"
         android:maxLines="2"
         android:text="@string/nome_do_filme"
-        android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:textColor="#423f3e"/>
 
