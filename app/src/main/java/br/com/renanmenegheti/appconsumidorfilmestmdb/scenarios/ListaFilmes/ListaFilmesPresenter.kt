@@ -23,7 +23,7 @@ class ListaFilmesPresenter(val view: ListaFilmesContract.View): ListaFilmesContr
         call.enqueue(object: Callback<List<Filme>>{
             override fun onFailure(call: Call<List<Filme>>, t: Throwable) {
 
-                val cacheFilmes: List<Filme> = Paper.book().read("filmes")
+                val cacheFilmes: List<Filme>? = Paper.book().read("filmes")
 
                 if (cacheFilmes == null){
                     view.exibirMensagem("Falha na conexão.")
@@ -37,7 +37,7 @@ class ListaFilmesPresenter(val view: ListaFilmesContract.View): ListaFilmesContr
             override fun onResponse(call: Call<List<Filme>>, response: Response<List<Filme>>) {
                 if (response.body() == null){
 
-                    val cacheFilmes = Paper.book().read<List<Filme>?>("filmes")
+                    val cacheFilmes: List<Filme>? = Paper.book().read("filmes")
 
                     if (cacheFilmes == null){
                         view.exibirMensagem("Sem filmes para hoje.")

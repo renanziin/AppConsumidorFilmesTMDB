@@ -55,8 +55,7 @@ class ListaFilmesActivity : AppCompatActivity(), ListaFilmesContract.View {
     fun calculaSpans(): Int {
         val displayMetrics: DisplayMetrics = this.getResources().getDisplayMetrics()
         val dpWidth = displayMetrics.widthPixels / displayMetrics.density
-        val spanCount = (dpWidth / 160).toInt()
-        // Where 160 is the width of your grid item. You can change it as per your convention.
+        val spanCount = (dpWidth / 160).toInt()  // Onde 160 é a largura do seu item da grade
         return spanCount
     }
 }
